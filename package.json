@@ -1,0 +1,27 @@
+{
+  "name": "api_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.2",
+    "load-grunt-tasks": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "standard": "^13.1.0"
+  },
+  "standard": {
+    "ignore": [
+      "package.json",
+      "gruntfile.json"
+    ]
+  }
+}
