@@ -1,0 +1,19 @@
+.cards__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards__item {
+  flex: 0 0 265px;
+}
+
+.cards__item + .cards__item {
+  margin-top: 2rem;
+}
+
+@media(min-width: 1440px) {
+  .cards__list {
+    flex-direction: row;
+  }
+}

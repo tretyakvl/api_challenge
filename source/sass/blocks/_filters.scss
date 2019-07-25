@@ -1,16 +1,32 @@
 .filters {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .flters__search {
-  padding: 1rem 4.6875rem;
+  padding: 1rem 4.70rem;
   margin-bottom: 2.35rem;
 
   border: none;
-  border-radius: 0.3rem;
-
   box-shadow: $shadow;
-
+  border-radius: $radius;
   background: $white url(../img/search-icon.svg) 50px 50%/15px no-repeat;
+}
+
+@media(min-width: 1440px) {
+  .filters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .flters__search {
+    width: 480px;
+    padding: 1.3rem 4.70rem;
+    margin-bottom: 0;
+  }
+
+  .filters__regions {
+    display: flex;
+  }
 }
