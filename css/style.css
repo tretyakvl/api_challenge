@@ -217,8 +217,22 @@ main {
   flex-direction: column; }
 
 .flters__search {
-  padding: 1.25rem 4.6875rem;
+  padding: 1rem 4.6875rem;
+  margin-bottom: 2.35rem;
   border: none;
   border-radius: 0.3rem;
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
-  background: url(../img/search-icon.svg) 10% 50%/15px no-repeat; }
+  background: white url(../img/search-icon.svg) 50px 50%/15px no-repeat; }
+
+.regions__button {
+  padding: 1.1rem 5.6rem 1.1rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.3rem;
+  background: white;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
+
+.regions__list {
+  display: none; }
