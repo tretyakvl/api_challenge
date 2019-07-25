@@ -1,0 +1,17 @@
+.regions__button {
+  padding: 1.1rem 5.6rem 1.1rem 1.5rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 0.3rem;
+
+  background: $white;
+  box-shadow: $shadow;
+  cursor: pointer;
+}
+
+.regions__list {
+  display: none;
+}
