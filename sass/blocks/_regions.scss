@@ -5,7 +5,7 @@
   font-weight: 600;
 
   border: none;
-  border-radius: 0.3rem;
+  border-radius: $radius;
 
   background: $white;
   box-shadow: $shadow;
@@ -14,4 +14,12 @@
 
 .regions__list {
   display: none;
+}
+
+@media(min-width: 1440px) {
+  .regions__button {
+    padding: 1.3rem 5rem 1.3rem 1.5rem;
+
+    font-size: 0.85rem;
+  }
 }

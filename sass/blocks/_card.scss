@@ -1,0 +1,52 @@
+.card {
+  color: inherit;
+
+  text-decoration: none;
+
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+.card__flag {
+  vertical-align: top;
+
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+.card__content {
+  padding: 1.6rem 1.56rem 2.81rem;
+}
+
+.card__name {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.card__table {
+  display: block;
+}
+
+.card__table * {
+  display: block;
+}
+
+.card__table tr td {
+  display: inline;
+}
+
+.card__table tr + tr {
+  margin-top: 0.2rem;
+}
+
+.card__stat {
+  font-weight: 600;
+}
+
+.card__data {
+  font-weight: 300;
+}
+
