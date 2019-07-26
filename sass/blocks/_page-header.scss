@@ -1,5 +1,5 @@
 .page-header {
-  background-color: $white;
+  background-color: var(--elements);
 }
 
 .page-header__container {
@@ -19,7 +19,7 @@
   font-size: 0.875rem;
 }
 
-.page-header__switch {
+.page-header__switch label {
   position: relative;
   padding: 0;
 

@@ -7,7 +7,7 @@
   border: none;
   border-radius: $radius;
 
-  background: $white;
+  background: var(--elements);
   box-shadow: $shadow;
   cursor: pointer;
 }
