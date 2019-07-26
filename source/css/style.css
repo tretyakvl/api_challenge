@@ -146,6 +146,10 @@ template {
   display: none; }
 
 body {
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --bg: hsl(0, 0%, 98%);
+  --elements: hsl(0, 0%, 100%);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -153,19 +157,35 @@ body {
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.4;
-  color: #111517; }
+  color: var(--text);
+  background-color: var(--bg); }
+
+body.is-dark {
+  --text: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 52%);
+  --bg: hsl(207, 26%, 17%);
+  --elements: hsl(209, 23%, 22%); }
 
 *,
 ::before,
 ::after {
   box-sizing: inherit; }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
 main {
   min-width: 375px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 1.5625rem 0.9375rem;
-  background-color: #fafafa;
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset; }
 
 @media (min-width: 1440px) {
@@ -173,7 +193,7 @@ main {
     padding: 3rem 5rem; } }
 
 .page-header {
-  background-color: white; }
+  background-color: var(--elements); }
 
 .page-header__container {
   display: flex;
@@ -188,7 +208,7 @@ main {
   margin: 0;
   font-size: 0.875rem; }
 
-.page-header__switch {
+.page-header__switch label {
   position: relative;
   padding: 0;
   font-size: 0.75rem;
@@ -196,7 +216,7 @@ main {
   background-color: transparent;
   border: none;
   cursor: pointer; }
-  .page-header__switch::before {
+  .page-header__switch label::before {
     content: url(../img/switch-icon.svg);
     position: absolute;
     top: 0;
@@ -223,7 +243,7 @@ main {
   border: none;
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
   border-radius: 0.3rem;
-  background: white url(../img/search-icon.svg) 50px 50%/15px no-repeat; }
+  background: var(--elements) url(../img/search-icon.svg) 50px 50%/15px no-repeat; }
 
 @media (min-width: 1440px) {
   .filters {
@@ -242,7 +262,7 @@ main {
   font-weight: 600;
   border: none;
   border-radius: 0.3rem;
-  background: white;
+  background: var(--elements);
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
   cursor: pointer; }
 
