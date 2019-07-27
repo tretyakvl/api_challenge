@@ -1,4 +1,4 @@
-export default function () {
+export default (() => {
   const switcher = document.querySelector('#switch')
   const body = document.querySelector('body')
 
@@ -7,4 +7,4 @@ export default function () {
     if (event.target.checked) body.classList.add('is-dark')
     else body.classList.remove('is-dark')
   })
-}
+})()
