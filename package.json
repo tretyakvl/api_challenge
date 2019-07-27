@@ -19,9 +19,11 @@
     "standard": "^13.1.0"
   },
   "standard": {
+    "env": "browser",
     "ignore": [
       "package.json",
-      "gruntfile.json"
+      "gruntfile.json",
+      "source/js/main.js"
     ]
   }
 }

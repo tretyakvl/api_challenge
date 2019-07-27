@@ -1,3 +1,2 @@
-'use strict'
-import themeSswitcher from './modules/theme-switcher.js'
-import cardsRender from './modules/cards-render.js'
+import './modules/theme-switcher.js'
+import './modules/cards-render.js'
