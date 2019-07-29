@@ -166,6 +166,9 @@ body.is-dark {
   --bg: hsl(207, 26%, 17%);
   --elements: hsl(209, 23%, 22%); }
 
+main {
+  position: relative; }
+
 *,
 ::before,
 ::after {
