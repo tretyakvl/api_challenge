@@ -24,6 +24,10 @@ body.is-dark {
   --elements: hsl(209, 23%, 22%);
 }
 
+main {
+  position: relative;
+}
+
 *,
 ::before,
 ::after {
