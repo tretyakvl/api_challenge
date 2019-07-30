@@ -31,7 +31,12 @@ cardsSection.appendChild(list)
 function handler (event) {
   event.preventDefault()
   const section = document.querySelector('main')
-  const card = template.querySelector('.card--detailed')
+  const card = template.querySelector('.card--detailed').cloneNode(true)
+  const back = card.querySelector('.card__back')
   addContent(card, this._data)
   section.appendChild(card)
+  back.addEventListener('click', event => {
+    event.preventDefault()
+    card.remove()
+  })
 }
