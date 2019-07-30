@@ -50,3 +50,12 @@
   font-weight: 300;
 }
 
+.card--detailed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  text-align: center;
+  background-color: var(--bg);
+}
