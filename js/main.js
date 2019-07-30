@@ -8,6 +8,8 @@ const card = template.querySelector('.card')
 
 for (const country of countries) {
   const copy = card.cloneNode(true)
+  copy['_data'] = country
+  copy.addEventListener('click', handler)
   addContent(copy, country)
   list.appendChild(copy)
 }
@@ -25,3 +27,11 @@ function addContent (node, data) {
   })
 }
 cardsSection.appendChild(list)
+
+function handler (event) {
+  event.preventDefault()
+  const section = document.querySelector('main')
+  const card = template.querySelector('.card--detailed')
+  addContent(card, this._data)
+  section.appendChild(card)
+}
