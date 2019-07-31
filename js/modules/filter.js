@@ -22,6 +22,7 @@ export default () => {
     if (input.tagName === 'INPUT') {
       restoreCards()
       filterCards(input)
+      button.textContent = input.dataset.region
     }
   })
 
@@ -39,7 +40,7 @@ export default () => {
     const newElements = Array.from(cardsSection.children)
 
     newElements.forEach((elem, i) => {
-      if (elem.nodeName === 'DIV') {
+      if (elem.classList.contains('placeholder')) {
         cardsSection.replaceChild(cards[i], elem)
       }
     })
