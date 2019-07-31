@@ -1,7 +1,13 @@
 export default () => {
   const button = document.querySelector('.regions__button')
   const list = document.querySelector('.regions__list')
-  const cards = Array.from(document.querySelectorAll('.card'))
+  const cardsSection = document.querySelector('.cards__list')
+  const cards = Array.from(cardsSection.querySelectorAll('.card'))
+  const inputs = Array.from(list.querySelectorAll('input'))
+
+  for (const input of inputs) {
+    input.checked = false
+  }
 
   button.addEventListener('click', () => {
     if (list.style.display === 'block') {
@@ -12,17 +18,29 @@ export default () => {
   })
 
   list.addEventListener('click', event => {
-    if (event.target.tagName === 'INPUT') {
-      filterCards(event.target)
+    const input = event.target
+    if (input.tagName === 'INPUT') {
+      restoreCards()
+      filterCards(input)
     }
   })
 
   function filterCards (input) {
     cards.forEach(card => {
-      if (card._data.region === input.dataset.region) {
-        card.style.display = 'block'
-      } else {
-        card.style.display = 'none'
+      if (card._data.region !== input.dataset.region) {
+        const placeholder = document.createElement('div')
+        placeholder.classList.add('placeholder')
+        card.replaceWith(placeholder)
+      }
+    })
+  }
+
+  function restoreCards () {
+    const newElements = Array.from(cardsSection.children)
+
+    newElements.forEach((elem, i) => {
+      if (elem.nodeName === 'DIV') {
+        cardsSection.replaceChild(cards[i], elem)
       }
     })
   }
