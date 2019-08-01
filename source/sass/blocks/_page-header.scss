@@ -39,6 +39,14 @@
 
     width: 15px;
     height: 15px;
+
+    transform: rotate(-25deg)
+  }
+}
+
+#switch:checked ~ label {
+  &::before {
+    content: url(../img/switch-icon2.svg)
   }
 }
 
