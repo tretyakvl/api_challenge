@@ -225,7 +225,11 @@ main {
     top: 0;
     left: -25px;
     width: 15px;
-    height: 15px; }
+    height: 15px;
+    transform: rotate(-25deg); }
+
+#switch:checked ~ label::before {
+  content: url(../img/switch-icon2.svg); }
 
 @media (min-width: 1440px) {
   .page-header__container {
