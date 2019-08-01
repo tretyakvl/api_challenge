@@ -7,6 +7,7 @@ export default () => {
 
   for (const input of inputs) {
     input.checked = false
+    // restoreCards()
   }
 
   button.addEventListener('click', () => {
