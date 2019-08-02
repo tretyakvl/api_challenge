@@ -34,7 +34,7 @@
     content: url(../img/switch-icon.svg);
 
     position: absolute;
-    top: 0;
+    top: 2px;
     left: -25px;
 
     width: 15px;
@@ -50,16 +50,16 @@
   }
 }
 
-@media(min-width: 1440px) {
+@media(min-width: 600px) {
   .page-header__container {
-    padding: 1.375rem 5rem;
+    padding: 1.475rem 5rem;
   }
 
   .page-header__title {
     font-size: 1.5rem;
   }
 
-  .page-header__switch {
+  .page-header__switch label {
     font-size: 1rem;
   }
 }
