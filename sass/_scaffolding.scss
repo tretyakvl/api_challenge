@@ -47,15 +47,6 @@ main {
 
 main {
   min-width: 375px;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 1.5625rem 0.9375rem;
 
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset;
-}
-
-@media(min-width: 1440px) {
-  main {
-    padding: 3rem 5rem;
-  }
 }

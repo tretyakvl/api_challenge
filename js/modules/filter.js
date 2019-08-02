@@ -11,6 +11,7 @@ export default () => {
   }
 
   button.addEventListener('click', () => {
+    button.classList.toggle('opened')
     if (list.style.display === 'block') {
       list.style.display = ''
     } else {

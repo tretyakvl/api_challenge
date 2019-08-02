@@ -1,8 +1,16 @@
+.regions {
+  position: relative;
+}
+
 .regions__button {
-  padding: 1.1rem 5.6rem 1.1rem 1.5rem;
+  position: relative;
+  width: 200px;
+  padding: 0 1.5rem;
 
   font-size: 0.75rem;
   font-weight: 600;
+  line-height: 50px;
+  text-align: left;
 
   border: none;
   border-radius: $radius;
@@ -10,16 +18,64 @@
   background: var(--elements);
   box-shadow: $shadow;
   cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 20px;
+
+    padding: 2px;
+    border: solid hsl(200, 15%, 8%);
+    border-width: 0 2px 2px 0;
+    transform: rotate(50deg);
+  }
+}
+
+.regions__button.opened {
+  transform: rotate(230deg);
 }
 
 .regions__list {
-  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -148px;
+  z-index: 10;
+
+  display: block;
+  width: 200px;
+  margin: 0;
+  padding: 0.75rem 0;
+
+  list-style: none;
+  background-color: var(--elements);
+  border-radius: $radius;
+  box-shadow: $shadow;
 }
 
-@media(min-width: 1440px) {
-  .regions__button {
-    padding: 1.3rem 5rem 1.3rem 1.5rem;
+.regions__list label {
+  display: block;
+  padding: 0 1.5rem;
 
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2;
+
+  cursor: pointer;
+}
+
+
+@media(min-width: 600px) {
+  .regions__button {
+    font-size: 0.85rem;
+  }
+
+  .regions__list {
+    bottom: -165px;
+  }
+
+  .regions__list label {
     font-size: 0.85rem;
   }
 }
