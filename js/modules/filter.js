@@ -32,7 +32,8 @@ export default () => {
     cards.forEach(card => {
       if (card._data.region !== input.dataset.region) {
         const placeholder = document.createElement('div')
-        placeholder.classList.add('placeholder')
+        placeholder.style.display = 'none'
+        placeholder.className = 'placeholder'
         card.replaceWith(placeholder)
       }
     })
