@@ -37,7 +37,7 @@
   .filters__search {
     width: 480px;
     line-height: 55px;
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
   .filters__search::placeholder {
@@ -46,5 +46,11 @@
 
   .filters__regions {
     display: flex;
+  }
+}
+
+@media(min-width: 840px) {
+  .filters__search {
+    margin-bottom: 0;
   }
 }

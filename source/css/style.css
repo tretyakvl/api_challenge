@@ -263,12 +263,15 @@ main {
     justify-content: space-between; }
   .filters__search {
     width: 480px;
-    line-height: 55px;
-    margin-bottom: 0; }
+    line-height: 55px; }
   .filters__search::placeholder {
     font-size: 0.9rem; }
   .filters__regions {
     display: flex; } }
+
+@media (min-width: 840px) {
+  .filters__search {
+    margin-bottom: 0; } }
 
 .regions {
   position: relative; }
@@ -296,7 +299,7 @@ main {
     border-width: 0 2px 2px 0;
     transform: rotate(50deg); }
 
-.regions__button.opened {
+.regions__button.opened::after {
   transform: rotate(230deg); }
 
 .regions__list {
@@ -305,7 +308,7 @@ main {
   right: 0;
   bottom: -148px;
   z-index: 10;
-  display: block;
+  display: none;
   width: 200px;
   margin: 0;
   padding: 0.75rem 0;
@@ -325,6 +328,8 @@ main {
 @media (min-width: 600px) {
   .regions__button {
     font-size: 0.85rem; }
+    .regions__button::after {
+      top: 24px; }
   .regions__list {
     bottom: -165px; }
   .regions__list label {

@@ -33,7 +33,9 @@
 }
 
 .regions__button.opened {
-  transform: rotate(230deg);
+  &::after {
+    transform: rotate(230deg);
+  }
 }
 
 .regions__list {
@@ -43,7 +45,7 @@
   bottom: -148px;
   z-index: 10;
 
-  display: block;
+  display: none;
   width: 200px;
   margin: 0;
   padding: 0.75rem 0;
@@ -69,6 +71,10 @@
 @media(min-width: 600px) {
   .regions__button {
     font-size: 0.85rem;
+
+    &::after {
+      top: 24px;
+    }
   }
 
   .regions__list {
