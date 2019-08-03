@@ -260,7 +260,8 @@ main {
     padding: 3rem 5rem;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 0; }
   .filters__search {
     width: 480px;
     line-height: 55px; }
@@ -335,20 +336,19 @@ main {
   .regions__list label {
     font-size: 0.85rem; } }
 
+.cards {
+  max-width: 1440px;
+  margin: 0 auto; }
+
 .cards__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.cards__item {
-  flex: 0 0 265px; }
-
-.cards__item + .cards__item {
-  margin-top: 2rem; }
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fill, 265px);
+  justify-content: center; }
 
 @media (min-width: 1440px) {
   .cards__list {
-    flex-direction: row; } }
+    gap: 4.6rem; } }
 
 .card {
   color: inherit;
