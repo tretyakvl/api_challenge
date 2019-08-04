@@ -167,7 +167,11 @@ body.is-dark {
   --elements: hsl(209, 23%, 22%); }
 
 main {
-  position: relative; }
+  position: relative;
+  overflow: auto;
+  min-width: 375px;
+  height: calc(100vh - 5rem);
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset; }
 
 *,
 ::before,
@@ -184,11 +188,8 @@ main {
   width: 1px !important;
   overflow: hidden; }
 
-main {
-  min-width: 375px;
-  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset; }
-
 .page-header {
+  height: 5rem;
   background-color: var(--elements); }
 
 .page-header__container {
@@ -389,13 +390,17 @@ main {
   font-weight: 300; }
 
 .card--detailed {
-  position: absolute;
+  position: fixed;
+  top: 5rem;
   left: 0;
-  top: 0;
   right: 0;
+  bottom: 0;
+  z-index: 20;
+  overflow: auto;
   padding: 8.5rem 1.7rem 3.5rem;
   background-color: var(--bg);
-  border-radius: 0; }
+  border-radius: 0;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset; }
 
 .card--detailed .card__back {
   position: absolute; }
