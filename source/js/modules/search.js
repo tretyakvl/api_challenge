@@ -30,7 +30,7 @@ export default () => {
   function showMatches () {
     const regExp = new RegExp(`^${input.value}`, 'i')
     for (const card of cards) {
-      if (!regExp.test(card._data.name)) {
+      if (!regExp.test(card.data.name)) {
         card.style.display = 'none'
       } else {
         card.style.display = 'block'
