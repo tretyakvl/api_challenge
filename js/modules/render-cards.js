@@ -29,10 +29,20 @@ export default async () => {
     img.alt += data.name
     const name = node.querySelector('.card__name')
     name.textContent = data.name
-    const stats = ['population', 'region', 'capital']
+
     const fields = node.querySelectorAll('.card__data')
+    let stats = ['population', 'region', 'capital']
+    if (fields.length === 8) {
+      stats = ['nativeName', 'population', 'region', 'subregion', 'capital', 'topLevelDomain', 'currencies', 'languages']
+    }
     stats.forEach((stat, i) => {
-      fields[i].textContent = data[stat]
+      if (stat === 'topLevelDomain') {
+        fields[i].textContent = data[stat].join(', ')
+      } else if (stat === 'currencies' || stat === 'languages') {
+        fields[i].textContent = data[stat].map(stat => stat.name).join(', ')
+      } else {
+        fields[i].textContent = data[stat]
+      }
     })
   }
 
@@ -46,7 +56,7 @@ export default async () => {
 
     list.append(...this.data.borders.reduce((result, code) => {
       const name = alpha3Codes[code].name
-      const link = createItem(name)
+      const link = createLink(name)
       link.data = alpha3Codes[code].data
       link.addEventListener('click', showDetails)
       result.push(link)
@@ -60,7 +70,7 @@ export default async () => {
     })
   }
 
-  function createItem (name) {
+  function createLink (name) {
     const li = document.createElement('li')
     const a = document.createElement('a')
     a.classList.add('card__neighbor')
