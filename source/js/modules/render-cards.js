@@ -63,10 +63,14 @@ export default async () => {
       return result
     }, []))
 
+    section.style.overflow = 'hidden'
     section.appendChild(card)
     back.addEventListener('click', event => {
       event.preventDefault()
-      card.remove()
+      section.querySelectorAll('.card--detailed').forEach(node => {
+        node.remove()
+      })
+      section.style.overflow = ''
     })
   }
 

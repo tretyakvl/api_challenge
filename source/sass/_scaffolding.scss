@@ -26,6 +26,12 @@ body.is-dark {
 
 main {
   position: relative;
+  overflow: auto;
+
+  min-width: 375px;
+  height: calc(100vh - 5rem);
+
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset;
 }
 
 *,
@@ -45,8 +51,3 @@ main {
 	overflow: hidden;
 }
 
-main {
-  min-width: 375px;
-
-  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset;
-}
