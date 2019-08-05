@@ -5,6 +5,7 @@
 
   border-radius: $radius;
   box-shadow: $shadow;
+  background-color: var(--elements);
 }
 
 .card__flag {
@@ -59,11 +60,15 @@
   z-index: 20;
   overflow: auto;
 
-  padding: 8.5rem 1.7rem 3.5rem;
-
   background-color: var(--bg);
   border-radius: 0;
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1) inset;
+}
+
+.card--detailed .card__container {
+  max-width: 1440px;
+  padding: 8.5rem 1.7rem 3.5rem;
+  margin: 0 auto;
 }
 
 .card--detailed .card__back {
@@ -130,8 +135,8 @@ body.is-dark .card__back {
 
 .card__more ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   margin: 0;
   padding: 1rem 0 0;
@@ -140,11 +145,91 @@ body.is-dark .card__back {
 }
 
 .card__more li {
-  width: 100px;
+  padding: 0 1rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+
   font-size: 0.75rem;
   text-align: center;
   line-height: 2.5;
   background-color: var(--elements);
   box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.2rem;
+}
+
+@media(min-width: 600px) {
+  .card--detailed .card__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12.5rem 4.5rem 4.5rem 5.5rem;
+  }
+
+  .card--detailed .card__back {
+    top: 80px;
+    left: 88px;
+
+    padding: 0 2.5rem 0 4rem;
+
+    font-size: 1rem;
+    line-height: 2.5;
+
+    &::before {
+      left: 35px;
+    }
+  }
+
+  .card--detailed .card__flag {
+    width: 560px;
+    margin-bottom: 0;
+  }
+
+  .card--detailed .card__content {
+    width: 600px;
+    padding-top: 2.4rem;
+  }
+
+  .card--detailed .card__name {
+    font-size: 2rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .card--detailed .card__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 4.7rem;
+
+    overflow: auto;
+  }
+
+  .card--detailed .card__table {
+    font-size: 1rem;
+  }
+
+  .card--detailed .card__table + .card__table {
+    margin: 0;
+  }
+
+  .card--detailed .card__table tr + tr {
+    margin-top: 0.5rem;
+  }
+
+  .card__more {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .card__more span {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+
+  .card__more ul {
+    flex-grow: 1;
+    padding-top: 0;
+  }
 }

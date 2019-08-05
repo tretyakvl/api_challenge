@@ -9,7 +9,7 @@
   <title>Where in the world?</title>
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header" id="header">
     <div class="page-header__container">
       <h1 class="page-header__title">Where in the world?</h1>
       <div class="page-header__switch">
@@ -71,54 +71,58 @@
         </table>
       </div>
     </a>
-    <div class="card card--detailed">
-      <a class="card__back">Back</a>
-      <img src="" alt="The flag of " class="card__flag" width="265" height="160">
-      <div class="card__content">
-        <h2 class="card__name"></h2>
-        <table class="card__table">
-          <tr>
-            <td class="card__stat">Native Name:</td>
-            <td class="card__data"></td>
-          </tr>
-          <tr>
-            <td class="card__stat">Population:</td>
-            <td class="card__data"></td>
-          </tr>
-          <tr>
-            <td class="card__stat">Region:</td>
-            <td class="card__data"></td>
-          </tr>
-          <tr>
-            <td class="card__stat">Sub Region:</td>
-            <td class="card__data"></td>
-          </tr>
-          <tr>
-            <td class="card__stat">Capital:</td>
-            <td class="card__data"></td>
-          </tr>
-        </table>
-        <table class="card__table">
-          <tr>
-            <td class="card__stat">Top Level Domain:</td>
-            <td class="card__data"></td>
-          </tr>
-          <tr>
-            <td class="card__stat">Currencies:</td>
-            <td class="card__data"></td>
-          </tr>
-          <tr>
-            <td class="card__stat">Languages:</td>
-            <td class="card__data"></td>
-          </tr>
-        </table>
-        <div class="card__more">
-          <span>Border Coutries</span>
-          <ul>
-          </ul>
+    <section class="card card--detailed">
+      <div class="card__container">
+        <a class="card__back">Back</a>
+        <img src="" alt="The flag of " class="card__flag" width="265" height="160">
+        <div class="card__content">
+          <h2 class="card__name"></h2>
+          <div class="card__wrapper">
+            <table class="card__table">
+              <tr>
+                <td class="card__stat">Native Name:</td>
+                <td class="card__data"></td>
+              </tr>
+              <tr>
+                <td class="card__stat">Population:</td>
+                <td class="card__data"></td>
+              </tr>
+              <tr>
+                <td class="card__stat">Region:</td>
+                <td class="card__data"></td>
+              </tr>
+              <tr>
+                <td class="card__stat">Sub Region:</td>
+                <td class="card__data"></td>
+              </tr>
+              <tr>
+                <td class="card__stat">Capital:</td>
+                <td class="card__data"></td>
+              </tr>
+            </table>
+            <table class="card__table">
+              <tr>
+                <td class="card__stat">Top Level Domain:</td>
+                <td class="card__data"></td>
+              </tr>
+              <tr>
+                <td class="card__stat">Currencies:</td>
+                <td class="card__data"></td>
+              </tr>
+              <tr>
+                <td class="card__stat">Languages:</td>
+                <td class="card__data"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="card__more">
+            <span>Border Countries:</span>
+            <ul>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     <div class="cards__list"></div>
   </template>
   <script type="module" src="js/main.js"></script>
