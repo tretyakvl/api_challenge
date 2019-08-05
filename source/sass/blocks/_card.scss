@@ -68,9 +68,39 @@
 
 .card--detailed .card__back {
   position: absolute;
+  top: 40px;
+  left: 28px;
+
+  padding: 0 1.5rem 0 3.2rem;
+
+  color: var(--text);
+  line-height: 2.3;
+  background-color: var(--elements);
+  box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+
+  cursor: pointer;
+
+  &::before {
+    content: url(../img/arrow.svg);
+
+    position: absolute;
+    left: 25px;
+    top: 4px;
+    width: 16px;
+    height: 15px;
+  }
+}
+
+body.is-dark .card__back {
+  &::before {
+    content: url(../img/arrow2.svg);
+  }
 }
 
 .card--detailed .card__flag {
+  width: 320px;
+  height: auto;
   margin-bottom: 2.6rem;
   border-radius: 0;
 }
