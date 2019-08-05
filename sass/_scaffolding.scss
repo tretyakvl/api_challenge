@@ -4,6 +4,7 @@ body {
   --bg: hsl(0, 0%, 98%);
   --elements: hsl(0, 0%, 100%);
 
+  height: 100vh;
   margin: 0;
   padding: 0;
 
@@ -15,10 +16,12 @@ body {
   color: var(--text);
 
   background-color: var(--bg);
+
+  transition: background-color 100ms linear;
 }
 
 body.is-dark {
-  --text: hsl(0, 0%, 100%);
+  --text: hsl(0, 0%, 90%);
   --input: hsl(0, 0%, 52%);
   --bg: hsl(207, 26%, 17%);
   --elements: hsl(209, 23%, 22%);
@@ -38,6 +41,7 @@ main {
 ::before,
 ::after {
   box-sizing: inherit;
+  transition: inherit;
 }
 
 .visually-hidden {
