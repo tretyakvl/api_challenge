@@ -12,11 +12,6 @@ export default () => {
 
   button.addEventListener('click', () => {
     button.classList.toggle('opened')
-    if (list.style.display === 'block') {
-      list.style.display = ''
-    } else {
-      list.style.display = 'block'
-    }
   })
 
   list.addEventListener('click', event => {
@@ -30,7 +25,7 @@ export default () => {
 
   function filterCards (input) {
     cards.forEach(card => {
-      if (card._data.region !== input.dataset.region) {
+      if (card.data.region !== input.dataset.region) {
         const placeholder = document.createElement('div')
         placeholder.style.display = 'none'
         placeholder.className = 'placeholder'
