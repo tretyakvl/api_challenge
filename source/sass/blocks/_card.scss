@@ -257,5 +257,8 @@ body.is-dark .card__back {
 }
 
 .card--loading .card__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
   visibility: hidden;
 }
