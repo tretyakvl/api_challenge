@@ -145,6 +145,16 @@ template {
 [hidden] {
   display: none; }
 
+.fade-in {
+  opacity: 0;
+  animation: fade-in 200ms linear forwards; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body {
   --text: hsl(200, 15%, 8%);
   --input: hsl(0, 0%, 52%);
@@ -486,7 +496,8 @@ body.is-dark .card__back::before {
   line-height: 2.5;
   background-color: var(--elements);
   box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.2rem; }
+  border-radius: 0.2rem;
+  cursor: pointer; }
 
 @media (min-width: 600px) {
   .card--detailed .card__container {
@@ -495,7 +506,7 @@ body.is-dark .card__back::before {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 12.5rem 4.5rem 4.5rem 5.5rem; }
+    padding: 12.5rem 4.5rem 0 5.5rem; }
   .card--detailed .card__back {
     top: 80px;
     left: 88px;

@@ -155,6 +155,7 @@ body.is-dark .card__back {
   background-color: var(--elements);
   box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 @media(min-width: 600px) {
@@ -164,7 +165,7 @@ body.is-dark .card__back {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 12.5rem 4.5rem 4.5rem 5.5rem;
+    padding: 12.5rem 4.5rem 0 5.5rem;
   }
 
   .card--detailed .card__back {
