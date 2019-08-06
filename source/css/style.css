@@ -155,6 +155,12 @@ template {
   100% {
     opacity: 1; } }
 
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0; }
+  100% {
+    background-position: 468px 0; } }
+
 body {
   --text: hsl(200, 15%, 8%);
   --input: hsl(0, 0%, 52%);
@@ -547,3 +553,20 @@ body.is-dark .card__back::before {
   .card__more ul {
     flex-grow: 1;
     padding-top: 0; } }
+
+.card--loading {
+  position: relative;
+  padding-top: 160px; }
+  .card--loading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 265px;
+    height: 160px;
+    background-color: rgba(246, 247, 248, 0);
+    background-image: linear-gradient(to right, #ededed 8%, #dedede 18%, #ededed 33%);
+    background-size: 800px 100px;
+    animation: shimmer 1500ms linear forwards infinite; }
+
+.card--loading .card__flag {
+  visibility: hidden; }

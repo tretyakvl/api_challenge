@@ -25,7 +25,6 @@ export default async () => {
 
   function addContent (node, data) {
     const img = node.querySelector('.card__flag')
-    img.src = data.flag
     img.alt += data.name
     const name = node.querySelector('.card__name')
     name.textContent = data.name
@@ -34,6 +33,7 @@ export default async () => {
     let stats = ['population', 'region', 'capital']
     if (fields.length === 8) {
       stats = ['nativeName', 'population', 'region', 'subregion', 'capital', 'topLevelDomain', 'currencies', 'languages']
+      img.src = data.flag
     }
     stats.forEach((stat, i) => {
       if (stat === 'topLevelDomain') {

@@ -235,3 +235,27 @@ body.is-dark .card__back {
     padding-top: 0;
   }
 }
+
+.card--loading {
+  position: relative;
+  padding-top: 160px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 265px;
+    height: 160px;
+
+    background-color: hsla(210, 13%, 97%, 0);
+    background-image: linear-gradient(to right, hsl(0, 0%, 93%) 8%, hsl(0, 0%, 87%) 18%, hsl(0, 0%, 93%) 33%);
+    background-size: 800px 100px;
+    animation: shimmer 1500ms linear forwards infinite;
+  }
+}
+
+.card--loading .card__flag {
+  visibility: hidden;
+}
