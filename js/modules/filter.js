@@ -7,7 +7,6 @@ export default () => {
 
   for (const input of inputs) {
     input.checked = false
-    // restoreCards()
   }
 
   button.addEventListener('click', () => {
@@ -30,6 +29,8 @@ export default () => {
         placeholder.style.display = 'none'
         placeholder.className = 'placeholder'
         card.replaceWith(placeholder)
+      } else {
+        card.replaceWith(card)
       }
     })
   }
