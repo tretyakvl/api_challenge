@@ -569,4 +569,7 @@ body.is-dark .card__back::before {
     animation: shimmer 1500ms linear forwards infinite; }
 
 .card--loading .card__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
   visibility: hidden; }
