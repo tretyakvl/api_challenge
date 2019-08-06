@@ -322,7 +322,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -148px;
+  bottom: -173px;
   z-index: 10;
   visibility: hidden;
   width: 200px;
@@ -354,7 +354,7 @@ main {
     .regions__button::after {
       top: 24px; }
   .regions__list {
-    bottom: -165px; }
+    bottom: -193px; }
   .regions__list label {
     font-size: 0.85rem; } }
 
