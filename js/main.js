@@ -7,4 +7,24 @@ import addFitler from './modules/filter.js'
   await renderCards()
   addSearch()
   addFitler()
+
+  const cards = document.querySelectorAll('.card')
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  }
+
+  function onIntersection (entries) {
+    entries.forEach(entry => {
+      console.log(entry.target)
+      observer.unobserve(entry.target)
+    })
+  }
+
+  const observer = new IntersectionObserver(onIntersection, options)
+
+  for (const card of cards) {
+    observer.observe(card)
+  }
 })()
