@@ -216,7 +216,8 @@ main {
 
 .page-header__title {
   margin: 0;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  cursor: pointer; }
 
 .page-header__switch label {
   position: relative;
