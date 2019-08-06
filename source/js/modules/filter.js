@@ -23,16 +23,20 @@ export default () => {
   })
 
   function filterCards (input) {
-    cards.forEach(card => {
-      if (card.data.region !== input.dataset.region) {
-        const placeholder = document.createElement('div')
-        placeholder.style.display = 'none'
-        placeholder.className = 'placeholder'
-        card.replaceWith(placeholder)
-      } else {
-        card.replaceWith(card)
-      }
-    })
+    if (input.dataset.region === 'All') {
+      restoreCards()
+    } else {
+      cards.forEach(card => {
+        if (card.data.region !== input.dataset.region) {
+          const placeholder = document.createElement('div')
+          placeholder.style.display = 'none'
+          placeholder.className = 'placeholder'
+          card.replaceWith(placeholder)
+        } else {
+          card.replaceWith(card)
+        }
+      })
+    }
   }
 
   function restoreCards () {
